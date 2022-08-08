@@ -44,7 +44,13 @@ if not uploaded_file:
     st.caption('Mari kita gunakan data ini.')
 
 """
-Mengenai Dataset:
+Mengenai Dataset 📊:
+* Data ini mengandung 549346 baris yang unique/distinct.
+* Kolom label adalah kolom yang akan kita gunakan untuk prediksi dan mempunyai 2 kategori:
+1. Good - URL tidak mengandung hal-hal yang berbahaya dan situs tersebut bukan sebuah situs phishing.
+2. Bad - URL mengandung hal-hal yang berbahaya bagi komputer users dan situs tersebut adalah sebuat situs phishing.
+
+Tidak ada value yang NULL di dataset.
 
 """
 st.code(  
