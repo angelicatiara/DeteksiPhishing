@@ -3,8 +3,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 #import sklearn
-from nltk.tokenize import RegexpTokenizer
-import seaborn as sns
+#from nltk.tokenize import RegexpTokenizer
+#import seaborn as sns
 #import matplotlib
 #from matplotlib.figure import Figure
 
