@@ -12,7 +12,7 @@ import numpy as np
 
 
 st.title('Prediksi Website Phishing Menggunakan Machine Learning :fish:')
-st.subheader('by: Kelompok 7 / Tim Hore Hore Hackathon :star:')
+st.subheader('by: Kelompok 7 / Tim Mancing Mania :star:🎣')
 st.caption('Members: Tiara Angelica, Annisa Salsabila Ahdyani, Ina Mutmainah')
 
 st.image("https://csirt.umm.ac.id/wp-content/uploads/2022/06/bigstock-Data-Phishing-Hacker-Attack-t-319270852.jpg")
