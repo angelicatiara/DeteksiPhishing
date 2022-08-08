@@ -2,11 +2,11 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
-import sklearn
+#import sklearn
 from nltk.tokenize import RegexpTokenizer
 import seaborn as sns
-import matplotlib
-from matplotlib.figure import Figure
+#import matplotlib
+#from matplotlib.figure import Figure
 
 
 
