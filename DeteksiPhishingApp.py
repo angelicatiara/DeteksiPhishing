@@ -61,7 +61,7 @@ Dapat dilihat di data di atas, ada banyak sekali website phishing yang mirip-mir
 Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik linear simple) untuk membuat program deteksi URL
 
 """
-st.image("https://github.com/angelicatiara/DeteksiPhishing/blob/main/jenisphishing.jpg")    
+st.image("jenisphishing.jpg")    
              
 st.code(  
     f"""
