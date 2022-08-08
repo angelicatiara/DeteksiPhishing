@@ -52,7 +52,7 @@ Tidak ada value yang NULL di dataset.
 
 """
 
-st.write("🤖 Menggunakan Machine Learning untuk Deteksi Website Phishing 🤖" 
+#st.write("🤖 Menggunakan Machine Learning untuk Deteksi Website Phishing 🤖" 
 
 """
 Dapat dilihat di data di atas, ada banyak sekali website phishing yang mirip-mirip dengan website asli.
