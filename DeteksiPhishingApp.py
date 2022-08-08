@@ -61,7 +61,7 @@ Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik li
 """
 
 jenisPhishing = Image.open('https://github.com/angelicatiara/DeteksiPhishing/blob/main/jenisphishing.jpg')
-st.image(jenisPhishing, caption:'hahaha')    
+st.image(jenisPhishing)    
              
 st.code(  
     f"""
