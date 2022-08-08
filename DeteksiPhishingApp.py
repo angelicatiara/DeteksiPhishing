@@ -66,7 +66,7 @@ predict_bad = ['www.yeniik.com.tr/wp-admin/js/login.alibaba.com/login.jsp.php',
     'www.svision-online.de/mgfi/administrator/components/com_babackup/classes/fx29id1.txt']
 predict_good = ['www.youtube.com/','www.python.org/', 'www.google.com/', 'www.kaggle.com/']
 
-loaded_model = pickle.load(open('https://github.com/angelicatiara/DeteksiPhishing/blob/main/phishing.pkl', 'rb'))
+loaded_model = pickle.load(open('https://github.com/angelicatiara/DeteksiPhishing/blob/main/phishing.pkl?raw=true', 'rb'))
 
 result_1 = loaded_model.predict(predict_bad)
 result_2 = loaded_model.predict(predict_good)
