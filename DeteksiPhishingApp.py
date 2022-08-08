@@ -28,7 +28,7 @@ dimana user diminta untuk memberikan informasi pribadinya. Disinilah phiser mema
 ketidak-telitian user dalam web palsu tersebut untuk mendapatkan informasi.
 
 """
-phishing_data = st.selectbox("Pilih dataset phishing URLs yang sudah kami siapkan untuk digunakan", ("C:\\Users\\TIARA ANGELICA S\\Downloads\\phishing_site_urls.csv","data-sample-2"))
+phishing_data = st.selectbox("Pilih dataset phishing URLs yang sudah kami siapkan untuk digunakan", ("phishing_site_urls.csv","data-sample-2"))
 st.markdown("**atau**")
 uploaded_file = st.file_uploader("Mau upload datanya sendiri? Monggo...", type='.csv')
 
