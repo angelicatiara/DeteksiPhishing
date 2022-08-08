@@ -60,7 +60,7 @@ Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik li
 
 """
 
-jenisPhishing = Image.open('https://i.im.ge/2022/08/08/FWvwhF.jenisphishing.jpg')
+jenisPhishing = Image.open('https://i0.wp.com/energystoragepro.com/wp-content/uploads/2021/05/building-a-cleaner-greener-grid-wec.jpg?w=715&ssl=1')
 st.image(jenisPhishing)    
              
 st.code(  
