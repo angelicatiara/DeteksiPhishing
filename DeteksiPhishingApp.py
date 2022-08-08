@@ -52,16 +52,17 @@ Tidak ada value yang NULL di dataset.
 
 """
 
-#st.write("🤖 Menggunakan Machine Learning untuk Deteksi Website Phishing 🤖" 
 
 """
+🤖 Menggunakan Machine Learning untuk Deteksi Website Phishing 🤖
+
 Dapat dilihat di data di atas, ada banyak sekali website phishing yang mirip-mirip dengan website asli.
 Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik linear simple) untuk membuat program deteksi URL
 
 """
 
-jenisPhishing = Image.open('https://i0.wp.com/energystoragepro.com/wp-content/uploads/2021/05/building-a-cleaner-greener-grid-wec.jpg?w=715&ssl=1')
-st.image(jenisPhishing)    
+#jenisPhishing = Image.open('https://i0.wp.com/energystoragepro.com/wp-content/uploads/2021/05/building-a-cleaner-greener-grid-wec.jpg?w=715&ssl=1')
+#st.image(jenisPhishing)    
              
 st.code(  
     f"""
