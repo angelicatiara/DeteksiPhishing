@@ -9,9 +9,6 @@ from PIL import Image
 #import matplotlib
 #from matplotlib.figure import Figure
 
-
-
-
 st.title('Prediksi Website Phishing Menggunakan Machine Learning :fish:')
 st.subheader('by: Kelompok 7 / Tim Mancing Mania :star:🎣')
 st.caption('Members: Tiara Angelica, Annisa Salsabila Ahdyani, Ina Mutmainah')
@@ -55,7 +52,7 @@ Tidak ada value yang NULL di dataset.
 
 """
 
-st.subheader("🤖 Menggunakan Machine Learning untuk Deteksi Website Phishing 🤖" 
+#st.subheader("🤖 Menggunakan Machine Learning untuk Deteksi Website Phishing 🤖" 
 
 """
 Dapat dilihat di data di atas, ada banyak sekali website phishing yang mirip-mirip dengan website asli.
@@ -63,8 +60,8 @@ Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik li
 
 """
 
-#jenisPhishing = Image.open('https://github.com/angelicatiara/DeteksiPhishing/blob/main/jenisphishing.jpg')
-#st.image(jenisPhishing, caption:'hahaha')    
+jenisPhishing = Image.open('https://github.com/angelicatiara/DeteksiPhishing/blob/main/jenisphishing.jpg')
+st.image(jenisPhishing, caption:'hahaha')    
              
 st.code(  
     f"""
