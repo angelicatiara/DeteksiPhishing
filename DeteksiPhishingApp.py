@@ -53,6 +53,16 @@ Mengenai Dataset 📊:
 Tidak ada value yang NULL di dataset.
 
 """
+
+st.subheader("🤖 Menggunakan Machine Learning untuk Deteksi Website Phishing 🤖" 
+
+"""
+Dapat dilihat di data di atas, ada banyak sekali website phishing yang mirip-mirip dengan website asli.
+Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik linear simple) untuk membuat program deteksi URL
+
+"""
+st.image("https://github.com/angelicatiara/DeteksiPhishing/blob/main/jenisphishing.jpg")    
+             
 st.code(  
     f"""
 import numpy as np
