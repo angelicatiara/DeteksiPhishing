@@ -2,6 +2,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
+from PIL import Image
 #import sklearn
 #from nltk.tokenize import RegexpTokenizer
 #import seaborn as sns
@@ -61,7 +62,9 @@ Dapat dilihat di data di atas, ada banyak sekali website phishing yang mirip-mir
 Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik linear simple) untuk membuat program deteksi URL
 
 """
-st.image("jenisphishing.jpg")    
+
+jenisPhishing = Image.open('https://github.com/angelicatiara/DeteksiPhishing/blob/main/jenisphishing.jpg')
+st.image(jenisPhishing, caption:'hahaha')    
              
 st.code(  
     f"""
