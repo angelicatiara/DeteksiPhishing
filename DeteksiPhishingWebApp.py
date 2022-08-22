@@ -284,6 +284,6 @@ Nah, sekarang kita sudah mempunyai score modelnya. Saatnya untuk melakukan predi
 """
 
 import webbrowser
-url = 'https://www.kaggle.com/angelicatiara/deteksi-phishing-tim-mancing-mania/'
+url = 'https://www.kaggle.com/code/angelicatiara/algoritma-deteksi-phishing-tim-mancing-mania'
 if st.button('Mau lihat proses LIVEnya? KLIK SAYA'):
     webbrowser.open_new_tab(url)
