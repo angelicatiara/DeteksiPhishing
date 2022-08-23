@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import datetime
-#import sklearn
+import sklearn
 #from nltk.tokenize import RegexpTokenizer
 #import seaborn as sns
 #import matplotlib
