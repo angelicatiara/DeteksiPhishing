@@ -6,6 +6,5 @@ plotly
 pandas
 joblib
 scikit-learn
-pickle
 nltk.tokenize
 matplotlib.figure
