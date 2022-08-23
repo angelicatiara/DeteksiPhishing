@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import datetime
 #import sklearn
-from nltk.tokenize import RegexpTokenizer
+#from nltk.tokenize import RegexpTokenizer
 import seaborn as sns
 import matplotlib
 from matplotlib.figure import Figure
@@ -350,7 +350,7 @@ create_columns(config_page, header)
 
 #Input pkl algorithm here
 
-model = pickle.load(open('D:\\Folder Coding\\VS Code\\phishing.pkl','rb'))
+model = pickle.load(open('phishing.pkl','rb'))
 
 def predict_url(URL):
     input = [URL]
