@@ -2,11 +2,16 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
+import datetime
 #import sklearn
 from nltk.tokenize import RegexpTokenizer
 import seaborn as sns
 import matplotlib
 from matplotlib.figure import Figure
+#Unpickle model
+import pickle
+#import cloudpickle
+
 
 st.title('Prediksi Website Phishing Menggunakan Machine Learning :fish:')
 st.subheader('by: Kelompok 7 / Tim Mancing Mania :star:🎣')
@@ -287,3 +292,149 @@ import webbrowser
 url = 'https://www.kaggle.com/code/angelicatiara/algoritma-deteksi-phishing-tim-mancing-mania'
 if st.button('Mau lihat proses LIVEnya? KLIK SAYA'):
     webbrowser.open_new_tab(url)
+
+
+#THIS is the new addition to the codes
+
+st.title('Prediksi Langsung URL Phishing 🐟📈')
+
+st.markdown('---')
+def config_page():
+    st.header('Apa yang akan app ini lakukan?')
+    POINTS = '''
+    - Phishing URL adalah URL dimana cybercriminal bla bla bla
+    - How does this app work?
+    ---
+    '''
+    st.markdown(POINTS)
+
+#create layout for columns
+def create_columns(func1, func2):
+    layout1, layout2 = st.columns((1, 1))
+    with layout1:
+        func1()
+    with layout2:
+        func2()
+
+#Warning for Applications atau put disclaimer here lol
+def app_warnings():
+    WARNING_DNU = '''
+    Aplikasi ini URLnya bisa salah bla bla bla u got the idea
+
+    Consult your IT/SECURITY TEAM if you think u run into a phishing url.
+    '''
+    with st.expander('❗DISCLAIMER ❗'):
+        st.warning(WARNING_DNU)
+
+def socials_ctr():
+    github_tiara = 'https://github.com/angelicatiara'
+    SC_Cont = f'''
+    - Team Mancing Mania
+    - Tiara Angelica (creator of application)
+    '''
+    with st.expander('Connect with me!'):
+        st.markdown(SC_Cont)
+
+def header():
+    st.header('The URL Prediction!')
+    p = '''
+    Masukkan URL yang mau diprediksi di sini.
+    - Input: Single URL input
+
+    Coba sample ini:
+
+    '''
+    st.markdown(p)
+
+create_columns(config_page, header)
+
+#Input pkl algorithm here
+
+model = pickle.load(open('D:\\Folder Coding\\VS Code\\phishing.pkl','rb'))
+
+def predict_url(URL):
+    input = [URL]
+
+    prediction = model.predict(input)
+    return prediction
+
+def main():
+    URL = st.text_input(label = 'URL Input', placeholder = 'https://sample-url.com/PASTE-YOUR-URL-HERE')
+
+    if st.button("Predict"):
+        output = predict_url(URL)
+        st.success('The URL is {}'.format(output))
+
+if __name__=='__main__':
+    main()
+
+
+# def url_input():
+#     t = st.text_input(label = 'URL Input', placeholder = 'https://sample-url.com/PASTE-YOUR-URL-HERE')
+#     return t
+
+
+# def url_cleaning():
+#     url = url_input()
+#     #url = str(url)
+#     dataPrediksi = str(url)
+
+#     return dataPrediksi
+
+#let's white out this code
+#    url = url.split('//')[-1]
+#    if url.endswith('/') is False:
+#        url = url + '/'
+#   dataPrediksi = pd.DataFrame({'domain': url}, index=[0])
+#    return dataPrediksi
+
+
+# def url_prediction():
+#     dataPrediksi = url_cleaning()
+#     st.text("")
+#     st.text("")
+
+#     with open("D:\Folder Coding\VS Code\phishing.pkl", 'rb') as pickle_file:
+#         model = pickle.load(pickle_file)
+        
+#     pred = model.predict(dataPrediksi)
+        
+#.tolist()
+
+#     t = f'#### {dataPrediksi} is {pred} \n'
+#     st.markdown(t)
+
+st.markdown('---')
+
+# url_prediction()
+st.text("")
+st.text("")
+st.text("")
+
+#create_columns(app_warnings, socials_contr)
+footer="""<style>
+a:link , a:visited{
+color: white;
+background-color: transparent;
+text-decoration: underline;
+}
+a:hover,  a:active {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: black;
+color: white;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Dikembangkan dengan ❤ by <a style='display: block; text-align: center;' href="https://github.com/angelicatiara" target="_blank">Tim Mancing Mania</a></p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
