@@ -357,7 +357,7 @@ def socials_ctr():
         - LinkedIn: [Ina Mutmainah]({linkedin_ina})
     
     '''
-    with st.expander('Connect with me!'):
+    with st.expander('Connect with the team!'):
         st.markdown(SC_Cont)
 
 def header():
@@ -399,7 +399,7 @@ def predict_url(URL):
     return prediction
 
 def main():
-    URL = st.text_input(label = 'URL Input', placeholder = 'https://sample-url.com/PASTE-YOUR-URL-HERE')
+    URL = st.text_input(label = 'URL Input', placeholder = 'www.sample-url.com/PASTE-YOUR-URL-HERE')
 
     if st.button("Predict"):
         output = predict_url(URL)
