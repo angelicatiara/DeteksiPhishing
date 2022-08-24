@@ -30,7 +30,7 @@ dimana user diminta untuk memberikan informasi pribadinya. Disinilah phiser mema
 ketidak-telitian user dalam web palsu tersebut untuk mendapatkan informasi.
 
 """
-phishing_data = st.selectbox("Pilih dataset phishing URLs yang sudah kami siapkan untuk digunakan", ("phishing_site_urls.csv.zip","data-sample-2"))
+phishing_data = st.selectbox("Pilih dataset phishing URLs yang sudah kami siapkan untuk digunakan", ("phishing_site_urls.csv.zip","url-phishing-multiattribut.csv"))
 st.markdown("**atau**")
 uploaded_file = st.file_uploader("Mau upload datanya sendiri? Monggo...", type='.csv')
 
@@ -288,11 +288,12 @@ st.write("0.9641500923891694")
 
 """
 Nah, sekarang kita sudah mempunyai score modelnya. Saatnya untuk melakukan prediksi :D
+Mari kita sebut saja algoritma ini sebagai algoritma "NLTK-CV-LogistikRegresi", karena menggabungkan proses-proses tersebut (sampai ada nama yang lebih baik hehe).
 """
 
 import webbrowser
 url = 'https://www.kaggle.com/code/angelicatiara/algoritma-deteksi-phishing-tim-mancing-mania'
-if st.button('KLIK TOMBOl INI untuk melihat running algoritma yang tadi kita bahas di kaggle 💻 '):
+if st.button('💻 KLIK TOMBOl INI untuk melihat running algoritma NLTK-CV-LogistikRegresi yang tadi kita bahas di kaggle 💻 '):
     webbrowser.open_new_tab(url)
 
 
