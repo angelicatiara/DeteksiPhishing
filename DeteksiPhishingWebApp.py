@@ -325,35 +325,58 @@ def create_columns(func1, func2):
 #Warning for Applications atau put disclaimer here lol
 def app_warnings():
     WARNING_DNU = '''
-    Aplikasi ini URLnya bisa salah bla bla bla u got the idea
+    Karena menggunakan algoritma AI yang berdasarkan dataset yang dianalisa oleh program, maka hasil prediksi URL yang diberikan bisa tidak akurat (dilihat dari skor model, ada kemungkinan kurang lebih 4% ketidak-akuratan model.
+    
+    Tolong gunakan dengan bijaksana.
+    
+    Konsultasi dengan tim IT atau Cybersecurity di tempat Anda apabila Anda sudah klik ke URL phishing di setting yang profesional.
+    MARI KITA TINGKATKAN PROTEKSI DATA BERSAMA.
 
-    Consult your IT/SECURITY TEAM if you think u run into a phishing url.
     '''
-    with st.expander('❗DISCLAIMER ❗'):
+    with st.expander('❗DISCLAIMER UNTUK HASIL PREDIKSI❗'):
         st.warning(WARNING_DNU)
 
 def socials_ctr():
     github_tiara = 'https://github.com/angelicatiara'
+    linkedin_tiara = 'https://www.linkedin.com/in/tiara-angelica/'
+    linkedin_annisa = 'https://www.linkedin.com/in/annisa-salsabila-ahdyani-360941216'
+    linkedin_ina = 'https://www.linkedin.com/in/ina-mutmainah/'
     SC_Cont = f'''
-    - Team Mancing Mania
-    - Tiara Angelica (creator of application)
-        - Github:
-        - Website:
-        - Kaggle: (saya banyak eksperimen dengan projek data science disini)
-    - Annisa Salsabila Ahdyani
-    - Ina Mutmainah
+    :star:🎣Team Mancing Mania :star:🎣
+    - Tiara Angelica (Python Programmer and Data Scientist)
+        - Github: [AngelicaTiara]({github_tiara})
+        - LinkedIn: [Tiara Angelica]({linkedin_tiara})
+    - Annisa Salsabila Ahdyani (Programmer and Copywriter)
+        - LinkedIn: [Annisa Salsabila]({linkedin_annisa})
+    - Ina Mutmainah (Copywriter and Web Designer)
+        - LinkedIn: [Ina Mutmainah]({linkedin_ina})
     
     '''
     with st.expander('Connect with me!'):
         st.markdown(SC_Cont)
 
 def header():
-    st.header('The URL Prediction!')
+    st.header('Mari kita prediksi URLnya!')
     p = '''
     Masukkan URL yang mau diprediksi di sini.
-    - Input: Single URL input
+    - Input: langsung ketik nama URL / Website tanpa "https://"
+        - Contoh: www.google.com
 
-    Coba sample ini:
+    Berikut contoh-contoh URL yang bisa dipakai.
+    
+    Website Phishing 😡😡😡:
+    1. www.yeniik.com.tr/wp-admin/js/login.alibaba.com/login.jsp.php
+    2. www.fazan-pacir.rs/temp/libraries/ipad
+    3. www.tubemoviez.exe
+    4. www.svision-online.de/mgfi/administrator/components/com_babackup/classes/fx29id1.txt
+    
+    Website Baik 👍👍👍👍:
+    1. www.youtube.com/
+    2. www.kominfo.go.id
+    3. www.digitalent.kominfo.go.id
+    4. www.netacad.com
+    
+    Coba tebak apa hasil dari URL: www.yahoo.exe?
 
     '''
     st.markdown(p)
