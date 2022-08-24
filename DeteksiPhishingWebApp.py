@@ -30,7 +30,7 @@ dimana user diminta untuk memberikan informasi pribadinya. Disinilah phiser mema
 ketidak-telitian user dalam web palsu tersebut untuk mendapatkan informasi.
 
 """
-phishing_data = st.selectbox("Pilih dataset phishing URLs yang sudah kami siapkan untuk digunakan", ("C:\\Users\\TIARA ANGELICA S\\Downloads\\phishing_site_urls.csv","data-sample-2"))
+phishing_data = st.selectbox("Pilih dataset phishing URLs yang sudah kami siapkan untuk digunakan", ("phishing_site_urls.csv.zip","data-sample-2"))
 st.markdown("**atau**")
 uploaded_file = st.file_uploader("Mau upload datanya sendiri? Monggo...", type='.csv')
 
@@ -55,20 +55,22 @@ Mengenai Dataset 📊:
 Tidak ada value yang NULL di dataset.
 
 """
-
+st.markdown('---')
 
 """
 🤖 Menggunakan Machine Learning untuk Deteksi Website Phishing 🤖
 
 Dapat dilihat di data di atas, ada banyak sekali website phishing yang mirip-mirip dengan website asli.
-Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik linear simple) untuk membuat program deteksi URL
+Oleh karena itu, di project ini, mari kita gunakan machine learning (logistik linear simple) untuk membuat program deteksi URL.
 
 """
 
 st.image('https://i.im.ge/2022/08/08/FZlDGM.jenisphishing.jpg')    
 
 """
-💻 💻 Tunggu apa lagi, mari kita lakukan coding-nya ^.^ 💻 💻 
+st.markdown('---')
+st.title('🥰 Penjelasan Proses ETL (Extract, Transform, and Load) untuk Algoritma yang Digunakan 🥰')
+💻 💻 Mari kita lakukan coding-nya ^.^ 💻 💻 
 
 Yang pertama kita lakukan adalah memasukkan datanya ke dalam program.
 """
@@ -290,20 +292,24 @@ Nah, sekarang kita sudah mempunyai score modelnya. Saatnya untuk melakukan predi
 
 import webbrowser
 url = 'https://www.kaggle.com/code/angelicatiara/algoritma-deteksi-phishing-tim-mancing-mania'
-if st.button('Mau lihat proses LIVEnya? KLIK SAYA'):
+if st.button('KLIK TOMBOl INI untuk melihat running algoritma yang tadi kita bahas di kaggle 💻 '):
     webbrowser.open_new_tab(url)
 
 
-#THIS is the new addition to the codes
+#THIS is the new addition to the codes after juri wants us to deploy the algo to the app hiks hiks
 
 st.title('Prediksi Langsung URL Phishing 🐟📈')
+st.write('Algoritma in action!')
 
 st.markdown('---')
 def config_page():
-    st.header('Apa yang akan app ini lakukan?')
+    st.header('Apa yang akan app di bawah ini akan lakukan?')
     POINTS = '''
-    - Phishing URL adalah URL dimana cybercriminal bla bla bla
-    - How does this app work?
+    - User dapat mengetik langsung URL (atau list URL) untuk cek apakah URL tersebut URL phishing atau URL legit/not phishing.
+    - User klik tombol "Predict" untuk menjalankan algoritma NLTK-CV-LogistikRegresi yang sudah dibuat dengan skor akurasi 96%+-.
+    - Algoritma predisi akan menghasilkan 2 (dua) hasil:
+        - Bad = URL adalah URL phishing yang memiliki potensi berbahaya.
+        - Good = URL adalah URL yang normal.
     ---
     '''
     st.markdown(POINTS)
@@ -331,6 +337,12 @@ def socials_ctr():
     SC_Cont = f'''
     - Team Mancing Mania
     - Tiara Angelica (creator of application)
+        - Github:
+        - Website:
+        - Kaggle: (saya banyak eksperimen dengan projek data science disini)
+    - Annisa Salsabila Ahdyani
+    - Ina Mutmainah
+    
     '''
     with st.expander('Connect with me!'):
         st.markdown(SC_Cont)
@@ -411,7 +423,9 @@ st.text("")
 st.text("")
 st.text("")
 
-#create_columns(app_warnings, socials_contr)
+create_columns(app_warnings, socials_contr)
+
+#FOOTER
 footer="""<style>
 a:link , a:visited{
 color: white;
