@@ -30,7 +30,7 @@ dimana user diminta untuk memberikan informasi pribadinya. Disinilah phiser mema
 ketidak-telitian user dalam web palsu tersebut untuk mendapatkan informasi.
 
 """
-phishing_data = st.selectbox("Pilih dataset phishing URLs yang sudah kami siapkan untuk digunakan", ("phishing_site_urls.csv.zip","url-phishing-multiattribut.csv"))
+phishing_data = st.selectbox("Pilih dataset phishing URLs yang sudah kami siapkan untuk digunakan (ada 2 datasets berbeda disini):", ("phishing_site_urls.csv.zip","url-phishing-multiattribut.csv"))
 st.markdown("**atau**")
 uploaded_file = st.file_uploader("Mau upload datanya sendiri? Monggo...", type='.csv')
 
@@ -46,7 +46,7 @@ if not uploaded_file:
     st.caption('Mari kita gunakan data ini.')
 
 """
-Mengenai Dataset 📊:
+Mengenai Dataset Pertama (phishing_site_urls.csv) 📊:
 * Data ini mengandung 549346 baris yang unique/distinct.
 * Kolom label adalah kolom yang akan kita gunakan untuk prediksi dan mempunyai 2 kategori:
 1. Good - URL tidak mengandung hal-hal yang berbahaya dan situs tersebut bukan sebuah situs phishing.
@@ -54,6 +54,10 @@ Mengenai Dataset 📊:
 
 Tidak ada value yang NULL di dataset.
 
+Mengenai Dataset Kedua (url-phishing-multiattribut.csv) 📊:
+* Adalah data yang memiliki 50 atribut.
+* Bersifat numerik dan lebih detail daripada dataset yang pertama.
+* Dapat digunakan sebagai pembanding.
 """
 st.markdown('---')
 
