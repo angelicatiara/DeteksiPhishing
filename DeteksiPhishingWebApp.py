@@ -423,7 +423,7 @@ st.text("")
 st.text("")
 st.text("")
 
-create_columns(app_warnings, socials_contr)
+create_columns(app_warnings, socials_ctr)
 
 #FOOTER
 footer="""<style>
